@@ -1,10 +1,9 @@
-//Create variables here
+
 var dog,dogImg,happyDog,happyDogImg,foodObjStock,foodObjS,database;
 var button1,button2,lastFed,fedTime,foodObj;
 
 function preload()
 {
-	//load images here
   dogImg = loadImage("Dog.png");
   happyDogImg = loadImage("happydog.png");
 
@@ -26,10 +25,6 @@ function setup() {
   button2 = createButton("Add Food");
   button2.position(885,200);
 
-  /*foodObjStock = database.ref('foodObj');
-  foodObjStock.on("value",(data)=>{
-    foodObjS = data.val();
-  })*/
   
 }
 
@@ -40,8 +35,6 @@ function draw() {
   foodObj.display();
   button1.mousePressed(feed);
   button2.mousePressed(addFood);
-  
-  console.log(foodObj.foodStock);
 
   drawSprites();
 
@@ -60,9 +53,6 @@ function draw() {
     text("Last Fed : "+lastFed+" AM",200,40);
   }
 
-  console.log(lastFed)
-
-  
 
 }
 
